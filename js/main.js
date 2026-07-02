@@ -89,7 +89,7 @@ function showInstruction() {
   let text = "";
 
   if (currentBlock.name === "연습") {
-    text = "자음 → 왼쪽 / 모음 → 오른쪽\n+에서는 잠깐 기다려 주세요";
+    text = "자음 → 왼쪽 / 모음 → 오른쪽<br>+에서는 잠깐 기다려 주세요";
   } else if (currentBlock.name === "본실험 1") {
     text = "긍정 → 왼쪽 / 부정 → 오른쪽";
   } else {
