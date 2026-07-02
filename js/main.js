@@ -84,14 +84,11 @@ function showInstruction() {
 
   document.getElementById("instructionTitle").textContent =
     currentBlock.name;
-  String newline = System.lineSeparator();
   // 설명 텍스트
   let text = "";
 
   if (currentBlock.name === "연습") {
-    text = "자음 → 왼쪽 / 모음 → 오른쪽" 
-      + newline 
-      + "+가 나오면 기다려 주세요";
+    text = "자음 → 왼쪽 / 모음 → 오른쪽";
   } else if (currentBlock.name === "본실험 1") {
     text = "긍정 → 왼쪽 / 부정 → 오른쪽";
   } else {
