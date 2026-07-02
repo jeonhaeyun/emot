@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>감정 반응속도 실험</title>
+
+  <!-- CSS 연결 -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+<!-- 시작 화면 -->
+<div id="startScreen" class="screen active">
+  <h1>감정 반응속도 실험</h1>
+  <p>참가자 번호를 입력해주세요.</p>
+
+  <input id="participantID" placeholder="참가자 번호">
+  <br><br>
+
+  <button id="startBtn" class="mainButton">참여하기</button>
+</div>
+
+<!-- 안내 화면 -->
+<div id="noticeScreen" class="screen">
+  <h1>실험 안내</h1>
+
+  <div class="instructions">
+    <p>
+      이는 반응속도 비교 실험입니다.<br>
+      최대한 빠르고 정확하게 응답해주세요.
+    </p>
+
+    <ol>
+      <li>연습</li>
+      <li>본실험 1</li>
+      <li>본실험 2</li>
+      <li>설문</li>
+    </ol>
+  </div>
+
+  <br>
+  <button id="noticeBtn" class="mainButton">이해했습니다</button>
+</div>
+
+<!-- 단계 안내 -->
+<div id="instructionScreen" class="screen">
+  <h1 id="instructionTitle"></h1>
+
+  <div class="instructions">
+    <p id="instructionText"></p>
+  </div>
+
+  <br>
+  <button id="instructionBtn" class="mainButton">
+    실험 시작
+  </button>
+</div>
+
+<!-- 실험 화면 -->
+<div id="experimentScreen" class="screen">
+
+  <div class="categoryBar">
+    <div id="leftCategory">왼쪽</div>
+    <div id="rightCategory">오른쪽</div>
+  </div>
+
+  <div id="stimulusArea">
+
+    <div id="fixation">+</div>
+
+    <div id="stimulusText" style="display:none;"></div>
+
+    <img id="stimulusImage" style="display:none;">
+
+    <div id="message"></div>
+
+  </div>
+
+  <div class="responseArea">
+    <button id="leftButton" class="responseBtn leftBtn">왼쪽 (F)</button>
+    <button id="rightButton" class="responseBtn rightBtn">오른쪽 (J)</button>
+  </div>
+
+</div>
+
+<!-- 설문 -->
+<div id="surveyScreen" class="screen">
+
+  <h1>설문</h1>
+
+  <p>당신의 성격은 밝은 편인가요?</p>
+  <select id="personality">
+    <option>1</option><option>2</option>
+    <option>3</option><option>4</option><option>5</option>
+  </select>
+
+  <br><br>
+
+  <p>현재 감정은 긍정적인가요?</p>
+  <select id="currentEmotion">
+    <option>1</option><option>2</option>
+    <option>3</option><option>4</option><option>5</option>
+  </select>
+
+  <br><br>
+
+  <p>최근 기억은 좋은 일이었나요?</p>
+  <select id="recentMemory">
+    <option>1</option><option>2</option>
+    <option>3</option><option>4</option><option>5</option>
+  </select>
+
+  <br><br>
+
+  <button id="surveySubmitBtn" class="mainButton">
+    설문 제출
+  </button>
+
+</div>
+
+<!-- 결과 -->
+<div id="resultScreen" class="screen">
+
+  <h1>실험 종료</h1>
+
+  <div id="resultBox"></div>
+
+  <br>
+
+  <button id="downloadBtn" class="mainButton">
+    CSV 다운로드
+  </button>
+
+</div>
+
+<!-- JS 연결 (중요: module!) -->
+<script type="module" src="./js/main.js"></script>
+
+</body>
+</html>
